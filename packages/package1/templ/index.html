@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Titulo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="{!l-js!}/jquery.js"></script>
+    <script type="text/javascript" src="{!l-js!}/jquery-ui.js"></script>
+    <script type="text/javascript" src="{!l-js!}/jquery.form.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="{!js!}/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="{!l-css!}/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="{!css!}/index.css">
+</head>
+<body>
+    <header>
+        <img id="logo" alt="logo" src="{!img!}/logo2.png" />
+        <h1>Q-stad</h1>
+    </header>
+    <nav>
+        <p>
+            <a href="?ID=logout">
+                <img src="{!img!}/logout.png" alt="logout" />
+            </a>
+        </p>
+        <p>
+            <a href="./">
+                <img src="{!img!}/home.png" alt="logout" />
+            </a>
+        </p>
+    </nav>
+    <article class="main">
+        {{content}}
+    </article>
+    <footer>
+        <p>Desrrollado por: Luis Miguel Morales Pajaro</p>
+    </footer>
+</body>

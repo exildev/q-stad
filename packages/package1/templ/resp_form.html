@@ -1,0 +1,37 @@
+<link href="{!css!}crea_form.css" rel="stylesheet" />
+<script src="{!js!}resp_form.js" type="text/javascript"></script>
+<section id="resp_form">
+    <a href="?ID=ver/all/form">
+        <img src="{!img!}back.png" title="Atras"/>
+    </a>
+    <h3 id="nombre">{{form->getNombre()}}</h3>
+    <form action="?ID=do/resp/form" method="post">
+        <input type="hidden" name="form" value="{{form->get_pk()}}"/>
+        <ol id="preguntas">
+            {%foreach ($pregs as $key => $preg)%}
+            <li>
+                <p>{{preg["enunciado"]}}</p>
+                {%if ($preg["tipo"] == "cerrada")%}
+                R/
+                <ol>
+                    {%if (isset($preg["respuestas"]))%}
+                    {%foreach ($preg["respuestas"] as $resp)%}
+                    <li>
+                        <input type="radio" name='preg{{preg["id_preg"]}}' value="{{resp->get_pk()}}">
+                        <label>{{resp->getValor()}}</label>
+                    </li>
+                    {%end%}
+                    {%end%}
+                </ol>
+                {%end%}
+                {%if ($preg["tipo"] == "abierta")%}
+                <div>
+                    <textarea name='preg{{preg["id_preg"]}}' ></textarea>
+                </div>
+                {%end%}
+            </li>
+            {%end%}
+        </ol>
+        <input type="submit" value="Enviar" />
+    </form>
+</section>

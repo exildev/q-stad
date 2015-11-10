@@ -1,0 +1,15 @@
+/* 
+    Document   : crea_form
+    Created on : 2/06/2013, 12:11:49 PM
+    Author     : luism
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+article a img{
+    padding:5px;
+}
+
+a img:hover{
+    background-color: #ddd;
+}

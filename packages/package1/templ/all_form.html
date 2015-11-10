@@ -1,0 +1,47 @@
+<link href="{!css!}all_form.css" rel="stylesheet" />
+<section id="all_form">
+    <a href="./">
+        <img src="{!img!}back.png" title="Atras"/>
+    </a>
+    <table>
+        <thead>
+            <tr>
+                <th class='num'>#</th>
+                <th class="nom">Nombre</th>
+                <th class="fec">Fecha</th>
+                <th class="lnk"></th>
+                <th class="lnk"></th>
+                <th class="lnk"></th>
+                <th class="lnk">
+                    <a href="?ID=ver/crea/form">Nuevo</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {%foreach ($forms as $key => $form)%}
+            <tr>
+                <td class='num'>{{key}}</td>
+                <td class="nom">{{form->getNombre()}}</td>
+                <td class="fec">{{form->getFecha_creacion()}}</td>
+                <td class="lnk">
+                    <a  href="?ID=ver/resp/form&form={{form->get_pk()}}">Responder</a>
+                </td>
+                 <td class="lnk">
+                    <a  href="?ID=/invite/form&form={{form->get_pk()}}">Invitar</a>
+                </td>
+                <td class="lnk">
+                    <a  href="?ID=ver/all/resp/form&form={{form->get_pk()}}">Respuestas</a>
+                </td>
+                <td class="lnk">
+                    <a  href="?ID=ver/stad/form&form={{form->get_pk()}}">Estadisticas</a>
+                </td>
+                <td class="lnk">
+                    <a  href="?ID=ver/edit/form&form={{form->get_pk()}}">
+                        <img src="{!img!}edit.png" />
+                    </a>
+                </td>
+            </tr>
+            {%end%}
+        </tbody>
+    </table>
+</section>

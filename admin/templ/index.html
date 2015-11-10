@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="{!css!}admin.css" rel="stylesheet" />
+        <title>Admin</title>
+    </head>
+    <body>
+        <header>
+            <h1>Admin - [{{user}}]</h1>
+        </header>
+        <nav>
+            <a href="?ID=packs">[[home]]</a>
+            <a href="temp/about_us.html">[[about_us]]</a>
+            <a href="?ID=logout">[[logout]]</a>
+        </nav>
+        <article>
+            {{content}}
+        </article>
+        <footer>
+            <p>
+                <small>&COPY; Copy rigth eXile</small>
+                <br/>
+                <small>[[licence]]</small>
+            </p>
+        </footer>
+    </body>
+</html>

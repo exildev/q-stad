@@ -1,0 +1,189 @@
+
+/**
+* @document: index.css
+* @author: Luis Miguel Morales Pajaro
+*  - El css basico de la página.
+*/
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url("{!img!}/xv.png");
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #299a0b;
+    border-bottom: #a9db80 solid 1px;
+}
+
+img#logo{
+    width: 70px;
+    display: inline-block;
+    padding: 20px;
+    float: left;
+}
+
+header h1{
+    font-family: arial;
+    font-size: 50px;
+    color: #fff;
+    margin: 0px;
+    padding: 16px;
+    float: left;
+}
+
+nav{
+    background-color: rgba(100, 100, 100, .2);
+    border-right: none;
+    height: 40px;
+    right: 0px;
+    top: 60px;
+}
+
+nav p{
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    padding: 5px 15px;
+    float: right;
+}
+
+nav p:hover{
+    cursor: pointer;
+    background-color: rgba(100, 100, 100, .2);
+}
+
+article.main {
+    margin: 0px auto;
+    margin-top: 40px;
+    width: 85%;
+    min-height: 55%;
+    border: #ddd solid 1px;
+    border-radius: 1px;
+    padding: 20px;
+    font-family: arial;
+    background-color: rgba(250, 250, 250, .7);
+}
+
+form#form-flow textarea{
+    width: 80%;
+    height: 100px;
+    resize: none;
+    border: solid #8ae77b 1px;
+    background-color: #daf7cb;
+}
+
+form#form-flow select, form#form-flow input[type=submit]{
+    border: solid #8ae77b 1px;
+    background-color: #daf7cb;
+    cursor: pointer;
+}
+article.main a p {
+    color: #000;
+    border: solid #8ae77b 1px;
+    background-color: #daf7cb;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 2px 2px;
+    margin: 0px auto;
+    width: 150px;
+}
+
+article.main p a{
+    color: #000;
+    border: solid #8ae77b 1px;
+    background-color: #daf7cb;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 2px 5px;
+}
+
+.formulario span{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.pregunta span{
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.respuesta div{
+    font-style: italic;
+    margin: 5px 40px;
+    display: inline-block;
+    width: 100px;
+}
+
+h1, h2, h3{
+    color: #8ae77b;
+}
+
+article ul{
+    width: 80%;
+    height: 90%;
+    margin: 0px auto;
+}
+
+article ul li{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 200px;
+    height: 150px;
+    margin: 20px 30px;
+}
+
+@-webkit-keyframes show{
+    0% {
+        opacity: 0;
+        width: 110px;
+        height: 110px;
+    }
+    70% {
+        opacity: 1;
+        width: 180px;
+        height: 180px;
+    }
+
+    100% {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+article ul li img{
+    transition: all .5s;
+    /*border: #8ae77b solid 3px;*/
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    /*background-color: #fff;*/
+}
+
+article ul li img:hover{
+    /*box-shadow: 0px 0px 10px #000;*/
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+}
+
+footer{
+    color: #ccc;
+    padding: 20px;
+    height: 150px;
+    vertical-align: middle;
+    margin-top: 30px;
+    background-image: url("{!img!}/footer-bg.png");
+}
+
+footer p{
+    padding: 15px;
+}

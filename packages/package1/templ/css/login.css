@@ -1,0 +1,46 @@
+/* 
+    Document   : login
+    Created on : 8/06/2013, 05:57:20 PM
+    Author     : luism
+    Description:
+        Purpose of the stylesheet follows.
+*/
+h4{
+    width: 370px;
+    font-size: 20px;
+    margin: 0px auto;
+    border: #299a0b solid 1px;
+    padding: 0px 30px;
+    background-color: #299a0b;
+    color: #fff;
+}
+form {
+    width: 370px;
+    font-size: 20px;
+    margin: 0px auto;
+    display: table;
+    border: #299a0b solid 1px;
+    padding: 30px;
+}
+
+form div{
+    display: table-row;
+}
+
+form label , form input{
+    display: table-cell
+}
+
+form input{
+    font-size: 20px;
+    border: #299a0b solid 1px;
+    color: #299a0b;
+    background-color: #8ae77b;
+}
+
+form input[type='submit']{
+    background-color: #299a0b;
+    border: #8ae77b solid 1px;
+    color: #fff;
+}
+

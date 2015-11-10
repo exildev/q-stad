@@ -1,0 +1,23 @@
+<section id="all_resp_form">
+    <a href="?ID=ver/all/form">
+        <img src="{!img!}back.png" title="Atras"/>
+    </a>
+    <table>
+        <thead>
+            <tr>
+                <th>Respuesta</th>
+                <th>-</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%foreach ($users as $key => $user)%}
+            <tr>
+                <td>Respuesta # {{key + 1}}</td>
+                <td>
+                    <a href='?ID=ver/resp&user={{user["id"]}}&form={{form}}'>Ver y/o cerrar</a>
+                </td>
+            </tr>
+            {%end%}
+        </tbody>
+    </table>
+</section>

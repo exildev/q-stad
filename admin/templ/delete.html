@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Admin</title>
+    </head>
+    <body>
+        <header>
+            <h1>Admin - [{{user}}]</h1>
+        </header>
+        <nav>
+            <a href="?ID=packs">[[home]]</a>
+            <a href="temp/about_us.html">[[about_us]]</a>
+        </nav>
+        <article>
+            [[del_msg]]
+            <form action="{{action}}" method="post">
+                <input type="hidden" name="{{name}}" value="{{pk}}" />
+                <a href="{{cancel}}">[[cancel]]</a>
+                <input type="submit" value="[[delete]]" />
+            </form>
+        </article>
+        <footer>
+            <p>
+                <small>&COPY; Copy rigth eXile</small>
+                <br/>
+                <small>[[licence]]</small>
+            </p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<link href="{!css!}crea_form.css" rel="stylesheet" />
+<script type="text/javascript" src="{!js!}/crea_form.js"></script>
+<input type="hidden" name="form" value="{{form->get_pk()}}"/>
+<section id="crea_form">
+    <a href="?ID=ver/all/form">
+        <img src="{!img!}back.png" title="Atras"/>
+    </a>
+    <a class="ef" href="#">
+        <img src="{!img!}edit.png" title="Editar"/>
+    </a>
+    <a class="df" href="#">
+        <img src="{!img!}del.png" title="Borrar"/>
+    </a>
+    <h3 id="nombre">{{form->getNombre()}}</h3>
+    <ol id="preguntas">
+        {%foreach ($pregs as $key => $preg)%}
+        <li pregunta="{{key}}">
+            <a pregunta="{{key}}" class="ep" href="#">Editar</a>
+            <a pregunta="{{key}}" class="dp" href="#">Borrar</a>
+            <p>{{preg["enunciado"]}}</p>
+            {%if ($preg["tipo"] == "cerrada")%}
+            R/
+            <ol>
+                {%if (isset($preg["respuestas"]))%}
+                {%foreach ($preg["respuestas"] as $resp)%}
+                <li respuesta="{{resp->get_pk()}}">
+                    <span respuesta="{{resp->get_pk()}}" >{{resp->getValor()}}</span>
+                    <a respuesta="{{resp->get_pk()}}" class="erc" href="#">Editar</a>
+                    <a respuesta="{{resp->get_pk()}}" class="drc" href="#">Borrar</a>
+                </li>
+                {%end%}
+                {%end%}
+            </ol>
+            <a pregunta='{{preg["pregunta"]->get_pk()}}' class="nrc" href="#">Agregar respuesta</a>
+            {%end%}
+        </li>
+        {%end%}
+    </ol>
+    <a id="npa" href="#">Nueva pregunta abierta</a>
+    <a id="npc" href="#">Nueva pregunta cerrada</a>
+</section>

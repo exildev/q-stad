@@ -1,0 +1,7 @@
+RewriteEngine on
+
+
+#RewriteRule /(.+)$ index.php?ID=$1
+
+#RewriteRule ^admin/(.+)\.png$ /logic/admin/temp/img/$1.png
+#RewriteRule ^admin/(.+)$ /index.php?ID=/admin/$1

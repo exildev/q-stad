@@ -1,0 +1,39 @@
+/* 
+    Document   : all_form
+    Created on : 4/06/2013, 06:03:50 PM
+    Author     : luism
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+table{
+    width: 90%;
+    margin: 0px auto;
+}
+
+table thead{
+    background-color: #afa;
+}
+
+table td, table th{
+    padding: 5px;
+}
+
+table tbody tr:nth-child(2n){
+    background: #dfd;
+}
+
+th.num, td.num{
+    width: 30px;
+    text-align: left;
+}
+
+th.fec, td.fec{
+    width: 150px
+}
+
+th.lnk, td.lnk{
+    width: 40px;
+    text-align: center;
+}
+

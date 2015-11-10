@@ -1,0 +1,16 @@
+{
+    "saludo": "hola mundo",
+    "home": "Inicio",
+    "about_us": "Nosotros",
+    "licence": "Licencia no comercial",
+    "delete": "Borrar",
+    "edit": "Editar",
+    "new": "Nuevo",
+    "cancel": "Cancelar",
+    "ok": "Aceptar",
+    "send": "Enviar",
+    "del_msg": "¿Esta seguro que desea borrar esto?",
+    "username": "Usuario",
+    "password": "Clave",
+    "logout": "Cerrar sesión"
+}

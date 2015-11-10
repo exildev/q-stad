@@ -1,0 +1,12 @@
+<link href="{!css!}crea_form.css" rel="stylesheet" />
+<section id="resp_form">
+    <a href="?ID=ver/all/form">
+        <img src="{!img!}back.png" title="Atras"/>
+    </a>
+    <h3 id="nombre">Invitar personas a responder {{form->getNombre()}}</h3>
+    <form action="?ID=do/invite/form" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="form" value="{{form->get_pk()}}"/>
+        <label>Archivo csv con las personas</label><input type="file" name="archivo" />
+        <input type="submit" value="Enviar" />
+    </form>
+</section>

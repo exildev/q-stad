@@ -1,0 +1,20 @@
+<script src="{!js!}resp.js" type="text/javascript"></script>
+<link href="{!css!}crea_form.css" rel="stylesheet" />
+<section id="crea_form">
+    <a href="?ID=ver/all/resp/form&form={{form->get_pk()}}">
+        <img src="{!img!}back.png" title="Atras"/>
+    </a>
+    <h3 id="nombre">{{form->getNombre()}}</h3>
+    <ol id="preguntas">
+        {%foreach ($pregs as $key => $preg)%}
+        <li pregunta="{{key}}">
+            <p>{{preg["enunciado"]}}</p>
+            R/ {%if ($preg["tipo"] == "cerrada")%}{{preg["respuesta"]}}{%end%}
+            {%if ($preg["tipo"] == "abierta")%}
+            <p>{{preg["respuesta"]}}</p>
+            Cerrar como: <input name="cerradura" respuesta='{{preg["id_resp"]}}' type="text" value='{{preg["cerradura"]}}' />
+            {%end%}
+        </li>
+        {%end%}
+    </ol>
+</section>
